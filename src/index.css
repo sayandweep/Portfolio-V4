@@ -29,16 +29,3 @@ body {
 #root {
   min-height: 100vh;
 }
-
-div {
-  font-size: 2rem;
-  color: rgb(4, 44, 20)
-}
-.ovrfl {
-  overflow: hidden;
-}
-.bigText {
-  font-weight: 700;
-  text-align: center;
-  line-height: 1;
-}

@@ -29,6 +29,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -53,6 +54,7 @@ a {
 .headerEl {
   padding: 0px;
   width: 100%;
+  position: relative;
 }
 
 .header {
@@ -66,6 +68,7 @@ a {
   font-size: 1.6em;
   font-weight: 700;
   line-height: 1;
+  position: relative;
 }
 
 .secondHeaderT {
@@ -157,14 +160,13 @@ a {
 }
 
 .img-group-container {
-  height: 500vh;
+  height: 400vh;
   position: relative;
 }
 
 .img-group-container .di {
   position: sticky;
   top: 20vh;
-  margin-bottom: -40%;
   left: 0;
   overflow: hidden;
   height: 100vh;
@@ -223,6 +225,10 @@ ul li {
   display: flex;
 }
 
+#worked {
+  margin-top: -500px;
+}
+
 @media(max-width: 786px) {
   .grid {
     display: grid;
@@ -242,5 +248,12 @@ ul li {
   }
   .footerWrapper div:nth-child(1) {
     padding: 0 70px 0 0;
+  }
+  #worked {
+    margin-top: -300px;
+  }  
+  .img-group-container {
+    height: 800vh;
+    position: relative;
   }
 }

@@ -1,19 +1,28 @@
 import { motion, cubicBezier, scroll, animate } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { projects, reels, works } from './components/const';
+import { useEffect } from 'react';
 
 function App() {
   // cubic mine :)
   const easing = cubicBezier(0.48, 0.3, 0.18, 1.15);
 
-  // gallery
-  const items = document.querySelectorAll(".img-container");
-  scroll(
-    animate(".img-group", {
-        transform: ["none", `translateX(-${items.length - 1}99px)`],
-    }),
-    { target: document.querySelector(".img-group-container") || undefined }
-)
+  // gallery – run after DOM is ready
+  useEffect(() => {
+    const container = document.querySelector(".img-group-container");
+    const group = document.querySelector(".img-group");
+    if (!container || !group) return;
+
+    const count = reels.length;
+    if (count === 0) return;
+
+    scroll(
+      animate(".img-group", {
+        transform: ["none", `translateX(-${(count - 1) * 100}px)`],
+      }),
+      { target: container }
+    );
+  }, [reels.length]);
   
 
   return (
@@ -72,8 +81,8 @@ function App() {
             </section>
       </div>
 
-      {/* articles */}
-      <div className="sectionWrapper" id="projects">
+      {/* worked with */}
+      <div className="sectionWrapper" id="worked">
         <h5>Worked with</h5>
         <div className="workbox">
           {works.map((work) => (

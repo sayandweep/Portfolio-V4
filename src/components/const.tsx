@@ -15,6 +15,9 @@ export const reels = [
   {id: 'A4', src: '/reels/A4.mp4'},
   {id: 'A5', src: '/reels/A5.mp4'},
   {id: 'A6', src: '/reels/A6.mp4'},
+  {id: 'A7', src: '/reels/A7.mp4'},
+  {id: 'A8', src: '/reels/A8.mp4'},
+  {id: 'A9', src: '/reels/A9.mp4'},
 ]
 
 // works

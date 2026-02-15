@@ -1,29 +1,20 @@
-import {motion, cubicBezier, scroll, animate} from 'motion/react'
-import {ArrowRight} from 'lucide-react'
-
+import { motion, cubicBezier, scroll, animate } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
+import { projects, reels, works } from './components/const';
 
 function App() {
   // cubic mine :)
-  const easing = cubicBezier(.48,.3,.18,1.15);
+  const easing = cubicBezier(0.48, 0.3, 0.18, 1.15);
 
   // gallery
   const items = document.querySelectorAll(".img-container");
   scroll(
     animate(".img-group", {
-        transform: ["none", `translateX(-${items.length - 1}8vw)`],
+        transform: ["none", `translateX(-${items.length - 1}9vw)`],
     }),
     { target: document.querySelector(".img-group-container") || undefined }
 )
-
-  // reels
-  const reels = [
-    {id: 'A1', src: '/reels/A1.mp4'},
-    {id: 'A2', src: '/reels/A2.mp4'},
-    {id: 'A3', src: '/reels/A3.mp4'},
-    {id: 'A4', src: '/reels/A4.mp4'},
-    {id: 'A5', src: '/reels/A5.mp4'},
-    {id: 'A6', src: '/reels/A6.mp4'},
-  ]
+  
 
   return (
     <div className="bodyEl">
@@ -38,48 +29,23 @@ function App() {
       id="projects">
         <h5>Current Projects</h5>
         <div className="grid">
-          <div className="overFlow" onClick={() => window.location.href = 'https://github.com/sayandweep/SaveMyQuotes'}>
+
+          {projects.map((project) => (
+            <div className="overFlow" onClick={() => window.location.href = project.href}>
             <motion.div
               initial={{ y:500 }}
               animate={{ y:0 }}
               whileHover={{ scale: .9, transition: { duration: 0.2 } }}
-              transition={{ duration: .8, ease: easing, delay: .25}}
+              transition={{ duration: .8, ease: easing, delay: project.delay}}
               className="cardBody">
-                <img src="src/images/savemyquotes.png" alt="posters"/>
+                <img src={project.img} alt={project.key}/>
                 <div className="cardLow">
                   <h4>Save My Quotes</h4>
                   <h6>2026</h6>
                 </div>
             </motion.div>
           </div>
-          <div className="overFlow">
-            <motion.div
-            initial={{ y:500 }}
-            animate={{ y:0 }}
-            whileHover={{ scale: .9, transition: { duration: 0.2 } }}
-            transition={{ duration: .8, ease: easing, delay: .30}}
-            className="cardBody">
-              <img src="src/images/posters.png" alt="posters"/>
-              <div className="cardLow">
-                <h4>Posters Designs</h4>
-                <h6>2020 - </h6>
-              </div>
-            </motion.div>
-          </div>
-          <div className="overFlow">
-            <motion.div
-            initial={{ y:500 }}
-            animate={{ y:0 }}
-            whileHover={{ scale: .9, transition: { duration: 0.2 } }}
-            transition={{ duration: .8, ease: easing, delay: .35}}
-            className="cardBody">
-              <img src="src/images/videos.png" alt="posters"/>
-              <div className="cardLow">
-                <h4>Video Edits</h4>
-                <h6>2024 - </h6>
-              </div>
-            </motion.div>
-          </div>
+          ))}
         </div>
       </motion.div>
 
@@ -110,8 +76,8 @@ function App() {
       <div className="sectionWrapper" id="projects">
         <h5>Worked with</h5>
         <div className="flex">
-          {['moc', 'Kovident', 'Edixo', 'amsu'].map((name) => (
-            <div key={name} className='workedWith'>{name}</div>
+          {works.map((work) => (
+            <div key={work.name} className='workedWith'>{work.name}</div>
           ))}
         </div>
       </div>

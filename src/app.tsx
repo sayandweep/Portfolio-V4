@@ -31,7 +31,7 @@ function App() {
         <div className="grid">
 
           {projects.map((project) => (
-            <div className="overFlow" onClick={() => window.location.href = project.href}>
+            <div className="overFlow" onClick={() => window.location.href = project.href} key={project.key}>
             <motion.div
               initial={{ y:500 }}
               animate={{ y:0 }}

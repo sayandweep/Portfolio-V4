@@ -10,7 +10,7 @@ function App() {
   const items = document.querySelectorAll(".img-container");
   scroll(
     animate(".img-group", {
-        transform: ["none", `translateX(-${items.length - 1}9vw)`],
+        transform: ["none", `translateX(-${items.length - 1}99px)`],
     }),
     { target: document.querySelector(".img-group-container") || undefined }
 )
@@ -75,9 +75,9 @@ function App() {
       {/* articles */}
       <div className="sectionWrapper" id="projects">
         <h5>Worked with</h5>
-        <div className="flex">
+        <div className="workbox">
           {works.map((work) => (
-            <div key={work.name} className='workedWith'>{work.name}</div>
+            <div key={work.name} className='workedWith'>{work.name} ({work.year})</div>
           ))}
         </div>
       </div>

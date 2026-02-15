@@ -19,9 +19,9 @@ export const reels = [
 
 // works
 export const works = [
-  {name: 'moc'},
-  {name: 'kovident'},
-  {name: 'edixo agency'},
-  {name: 'cricket winner'},
-  {name: 'amsu'}
+  {name: 'moc', year: '2023'},
+  {name: 'kovident', year: '2024'},
+  {name: 'edixo agency', year: '2025'},
+  {name: 'cricket winner', year:'2024'},
+  {name: 'amsu', year:'2024'}
 ]

@@ -17,6 +17,9 @@ export default function Header() {
             initial={{ y:100 }}
             animate={{ y:0 }}
             transition={{ duration: .8, ease: easing}}
+            onClick={() => {
+              window.location.href = "/";
+            }}
             >Sayandweep<span style={{color: "greenyellow"}}>.</span></motion.div>
           </div>
           <div className="overFlow">

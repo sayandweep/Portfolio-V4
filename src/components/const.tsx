@@ -2,9 +2,9 @@
 // we should export the projects array directly instead of a misformed component.
 
 export const projects = [
-  {href: 'https://github.com/sayandweep/SaveMyQuotes', img: '/images/savemyquotes.png', key: 'savemyquotes', delay: 1},
-  {href: '#', img: '/images/posters.png', key: 'posters', delay: 1.2},
-    {href: '#', img: '/images/videos.png', key: 'videos', delay: 1.4},
+  {href: 'https://github.com/sayandweep/SaveMyQuotes', img: '/images/savemyquotes.png', key: 'Save My Quotes', year: '2026', delay: 1},
+  {href: '#', img: '/images/posters.png', key: 'Posters', year: '2020', delay: 1.2},
+    {href: '#', img: '/images/videos.png', key: 'Videos', year: '2024', delay: 1.4},
 ]
 
 // reels
@@ -27,4 +27,10 @@ export const works = [
   {name: 'edixo agency', year: '2025'},
   {name: 'cricket winner', year:'2024'},
   {name: 'amsu', year:'2024'}
+]
+
+// blogs
+export const blogs = [
+  {key: 'New font in february 2026', url: '#'},
+  {key: 'New font in february 2026', url: '#'}
 ]

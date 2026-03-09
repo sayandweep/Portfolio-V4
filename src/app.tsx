@@ -1,9 +1,29 @@
 import { motion, cubicBezier, scroll, animate } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { projects, reels, works } from './components/const';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { supabase, type Post } from './lib/supabase';
 
 function App() {
+
+  const [loading, setLoading] = useState(true)
+  const [posts, setPosts] = useState<Post[]>([])
+
+  
+  useEffect(() => {
+    supabase
+      .from('posts')
+      .select('id, title, slug, excerpt, published_at, tags')
+      .eq('is_published', true)
+      .order('published_at', { ascending: false })
+      .then(({ data, error }) => {
+        console.log('data:', data)
+        console.log('error:', error)
+        setPosts((data ?? []) as Post[])
+        setLoading(false)
+      })
+  }, [])
+
   // cubic mine :)
   const easing = cubicBezier(0.48, 0.3, 0.18, 1.15);
 
@@ -23,7 +43,6 @@ function App() {
       { target: container }
     );
   }, [reels.length]);
-  
 
   return (
     <div className="bodyEl">
@@ -49,8 +68,8 @@ function App() {
               className="cardBody">
                 <img src={project.img} alt={project.key}/>
                 <div className="cardLow">
-                  <h4>Save My Quotes</h4>
-                  <h6>2026</h6>
+                  <h4>{project.key}</h4>
+                  <h6>{project.year}</h6>
                 </div>
             </motion.div>
           </div>
@@ -58,7 +77,21 @@ function App() {
         </div>
       </motion.div>
 
-      {/* articles */}
+      {/* blogs */}
+      <div className="sectionWrapper" id='blogs'>
+        <h5>Blogs</h5>
+        <div className="blogs">
+          {loading ? (
+            <div className="blogsEmpty">Loading...</div>
+          ) : posts.map((post) => (
+            <a href={`/blog/${post.slug}`} key={post.id}>
+              <ul>{post.title}</ul>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* reel*/}
       <div className="sectionWrapper" id="projects">
         <h5>Edited Reels</h5>
             <section className='img-group-container'>
@@ -90,6 +123,8 @@ function App() {
           ))}
         </div>
       </div>
+
+      {/*  */}
     </div>
   )
 }

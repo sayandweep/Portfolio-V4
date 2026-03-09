@@ -7,7 +7,8 @@
   --primaryColor: #0c0c0f;
   --secondColor: whitesmoke;
   --bgLineColor:  rgb(30, 30, 30);
-  --thirdColor: #18181c
+  --thirdColor: #18181c;
+  --hoverColor: #202023;
 }
 
     *,
@@ -69,6 +70,7 @@ a {
   font-weight: 700;
   line-height: 1;
   position: relative;
+  cursor: pointer;
 }
 
 .secondHeaderT {
@@ -145,8 +147,7 @@ a {
 }
 
 .cardBody:hover {
-  background-image: linear-gradient(180deg, white, greenyellow);
-  color: var(--primaryColor);
+  background: var(--hoverColor);
 }
 
 .cardBody h4 {
@@ -227,6 +228,49 @@ ul li {
 
 #worked {
   margin-top: -300px;
+}
+
+.postDate {
+  opacity: 0.5;
+  margin-bottom: 1.5em;
+  display: block;
+}
+
+.blogpost-container {
+  max-width: 678px;
+  width: 100%;
+  margin: 0 auto 1.5em auto;
+  padding: 20px;
+}
+
+.blogs{
+  background: var(--thirdColor);
+}
+
+.blogs {
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.blogs a {
+  padding: 1em;
+  border-bottom: solid rgba(255, 255, 255, 0.115) 1px;
+  display: block;
+  transition: .1s ease-in-out;
+}
+
+.blogs a:hover {
+  background: var(--hoverColor);
+}
+
+.blogs a:last-child {
+  padding: 1em;
+  border-bottom: none;
+  display: block;
+}
+
+.sectionWrapper a {
+  text-decoration: none;
 }
 
 @media(max-width: 786px) {

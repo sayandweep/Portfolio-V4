@@ -334,6 +334,11 @@ ul li {
   display: block;
 }
 
+.postTitle {
+  font-family: var(--secondaryFont);
+  word-spacing: -.1em;
+}
+
 .sectionWrapper a {
   text-decoration: none;
 }

@@ -29,7 +29,8 @@ export default function BlogPost() {
 
 
 
-  if (loading) return <div>Loading...</div>
+  if (loading) return <div className="blogpost-container">
+        <h1 className="postTitle" style={{textAlign: "center"}}>...</h1></div>
   if (notFound) return <div>Not Found</div>
 
 

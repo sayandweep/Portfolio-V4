@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { supabase, type Post } from "../lib/supabase"
 import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 
 
 export default function BlogPost() {
@@ -41,7 +42,7 @@ export default function BlogPost() {
                 day: 'numeric', month: 'long', year: 'numeric'
               })}
             </span>
-        <ReactMarkdown>{post!.content}</ReactMarkdown>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{post!.content}</ReactMarkdown>
       </div>
   )
 }

@@ -273,6 +273,15 @@ ul li {
   text-decoration: none;
 }
 
+.blogpost-container h2 {
+  margin-top: 1em;
+}
+
+.blogpost-container span.highlight {
+  background-color: greenyellow;
+  color: black;
+}
+
 @media(max-width: 786px) {
   .grid {
     display: grid;

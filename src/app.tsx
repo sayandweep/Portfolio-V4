@@ -48,11 +48,7 @@ function App() {
     <div className="bodyEl">
       
       {/* projects */}
-      <motion.div 
-      initial={{ y: 80, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: easing }}
+      <div
       className="sectionWrapper" 
       id="projects">
         <h5>Current Projects</h5>
@@ -60,12 +56,7 @@ function App() {
 
           {projects.map((project) => (
             <div className="overFlow" onClick={() => window.location.href = project.href} key={project.key}>
-            <motion.div
-              initial={{ y:500 }}
-              animate={{ y:0 }}
-              whileHover={{ transition: { duration: 0.1 } }}
-              transition={{ duration: .3, ease: easing}}
-              className="cardBody">
+            <div className="cardBody">
                 <div className='image'>
                 <img src={project.img} alt={project.key}/>
                 </div>
@@ -73,11 +64,11 @@ function App() {
                   <h4>{project.key}</h4>
                   <h6>{project.year}</h6>
                 </div>
-            </motion.div>
+            </div>
           </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* blogs */}
       <div className="sectionWrapper" id='blogs'>

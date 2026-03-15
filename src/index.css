@@ -362,6 +362,7 @@ ul li {
 .postBody .other {
   font-size: .5em;
   opacity: .5;
+  text-transform: uppercase;
 }
 
 .postBody:hover .other {

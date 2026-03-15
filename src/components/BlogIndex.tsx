@@ -25,7 +25,8 @@ export default function BlogIndex() {
 
 
 
-  if (loading) return <div>Loading...</div>
+  if (loading) return <div className="blogpost-container">
+        <h1 className="postTitle" style={{textAlign: "center"}}>L0#%I@G</h1></div>
 
 
 

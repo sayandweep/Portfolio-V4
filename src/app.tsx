@@ -63,10 +63,12 @@ function App() {
             <motion.div
               initial={{ y:500 }}
               animate={{ y:0 }}
-              whileHover={{ scale: .9, transition: { duration: 0.2 } }}
-              transition={{ duration: .8, ease: easing, delay: project.delay}}
+              whileHover={{ transition: { duration: 0.1 } }}
+              transition={{ duration: .3, ease: easing}}
               className="cardBody">
+                <div className='image'>
                 <img src={project.img} alt={project.key}/>
+                </div>
                 <div className="cardLow">
                   <h4>{project.key}</h4>
                   <h6>{project.year}</h6>
@@ -85,7 +87,12 @@ function App() {
             <div className="blogsEmpty">Loading...</div>
           ) : posts.map((post) => (
             <a href={`/blog/${post.slug}`} key={post.id}>
-              <ul>{post.title}</ul>
+              <div className='postBody'>
+                <div className='title'>{post.title}</div>
+                <div className='other'>
+                {new Date(post!.published_at).toLocaleDateString('en-GB', {day: 'numeric', month: 'short', year: 'numeric'} )}
+                </div>
+              </div>
             </a>
           ))}
         </div>

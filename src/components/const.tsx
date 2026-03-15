@@ -1,23 +1,22 @@
-// Since this is a constants file and does not involve a React component, 
-// we should export the projects array directly instead of a misformed component.
+export const sites = [
+  {name: 'Hero Patterns', type: 'design', link: 'https://heropatterns.com/'},
+]
 
 export const projects = [
-  {href: 'https://github.com/sayandweep/SaveMyQuotes', img: '/images/savemyquotes.png', key: 'Save My Quotes', year: '2026', delay: 1},
+  {href: 'https://github.com/sayandweep/SaveMyQuotes', img: '/images/savemyquote.avif', key: 'Save My Quotes', year: '2026', delay: 1},
   {href: '#', img: '/images/posters.png', key: 'Posters', year: '2020', delay: 1.2},
     {href: '#', img: '/images/videos.png', key: 'Videos', year: '2024', delay: 1.4},
 ]
 
 // reels
 export const reels = [
-  {id: 'A1', src: '/reels/A1.mp4'},
-  {id: 'A2', src: '/reels/A2.mp4'},
-  {id: 'A3', src: '/reels/A3.mp4'},
   {id: 'A4', src: '/reels/A4.mp4'},
   {id: 'A5', src: '/reels/A5.mp4'},
   {id: 'A6', src: '/reels/A6.mp4'},
   {id: 'A7', src: '/reels/A7.mp4'},
-  {id: 'A8', src: '/reels/A8.mp4'},
-  {id: 'A9', src: '/reels/A9.mp4'},
+  {id: 'A3', src: '/reels/A3.mp4'},
+  {id: 'A8', src: '/reels/V1.mp4'},
+  {id: 'A9', src: '/reels/V2.mp4'},
 ]
 
 // works

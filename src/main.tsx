@@ -8,6 +8,7 @@ import Footer from './components/footer.tsx'
 import BlogIndex from './components/BlogIndex.tsx'
 import BlogPost from './components/BlogPost.tsx'
 import AdminBlog from './components/AdminBlog.tsx'
+import Websites from './components/sites.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/blogs" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/admin" element={<AdminBlog />} />
+          <Route path="/websites" element={<Websites />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

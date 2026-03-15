@@ -1,5 +1,5 @@
 import { motion, cubicBezier } from "motion/react"
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 
 export default function Header() {
@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div className="headerEl">
       <div className="header">
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "left" }}>
           <div className="overFlow">
             <motion.div
             className="firstHeaderT"
@@ -24,58 +24,56 @@ export default function Header() {
           </div>
           <div className="overFlow">
             <motion.div
-            className="secondHeaderT"
+            className="sectext"
             initial={{ y:100 }}
             animate={{ y:0 }}
             transition={{ duration: .8, ease: easing, delay: .1}}
             >I Design, Build then Deliver</motion.div>
           </div>
-          {/* social icons */}
-          <div className="socilWrapper"> 
+        </div>
 
-            <a href="">
+        {/* social icons */}
+        <div className="socilWrapper"> 
+
+            <a href="//linkedin.com/in/sayandweep" target="_blank">
               <div className="overFlow">
                 <motion.div
                 className="secondHeaderT"
                 initial={{ y:100 }}
                 animate={{ y:0 }}
                 transition={{ duration: .8, ease: easing, delay: .15}}
-                ><Linkedin size={26} strokeWidth={1} /></motion.div>
+                ><Linkedin size={20} strokeWidth={1.5} /></motion.div>
               </div>
             </a>
-            <a href="">
+            <a href="mailto:helllo@sayandweep.in" target="_blank">
               <div className="overFlow">
                 <motion.div
                 className="secondHeaderT"
                 initial={{ y:100 }}
                 animate={{ y:0 }}
                 transition={{ duration: .8, ease: easing, delay: .2}}
-                ><Mail size={25} strokeWidth={1} /></motion.div>
+                ><Mail size={20} strokeWidth={1.5} /></motion.div>
               </div>
             </a>
-            <a href="">
+            <a href="//github.com/sayandweep" target="_blank">
               <div className="overFlow">
                 <motion.div
                 className="secondHeaderT"
                 initial={{ y:100 }}
                 animate={{ y:0 }}
                 transition={{ duration: .8, ease: easing, delay: .25}}
-                ><Twitter size={25} strokeWidth={1} /></motion.div>
+                ><Github size={20} strokeWidth={1.5} /></motion.div>
               </div>
             </a>
-            <a href="">
-              <div className="overFlow">
-                <motion.div
-                className="secondHeaderT"
-                initial={{ y:100 }}
-                animate={{ y:0 }}
-                transition={{ duration: .8, ease: easing, delay: .3}}
-                ><Github size={25} strokeWidth={1} /></motion.div>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
+
+      {/* menu */}
+      <div className="mainMenus">
+            <div className="menu"><a href="/blogs">Blogs</a></div>
+            <div className="menu"><a href="/websites">Websites</a></div>
+          </div>
+
     </div>
 
 

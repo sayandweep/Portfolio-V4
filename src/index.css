@@ -390,7 +390,86 @@ ul li {
   padding: 15px;
 }
 
+.videoPage {
+  height: 500px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.videoPage h1 {
+  font-family: var(--secondaryFont);
+  font-size: 3.5em;
+}
+
+.video-showcase-box {
+  position: relative;
+  width: 250px;
+  height: 320px;
+  padding: 2em 0 0 0;
+  border: 1px solid var(--borderC);
+  background: greenyellow;
+}
+
+.video-showcase-box-horizontal {
+  position: relative;
+  width: 320px;
+  height: 210px;
+  padding: 2em 0 0 0;
+  border: 1px solid var(--borderC);
+  background: greenyellow;
+}
+
+.box-1 {
+  transform: translateX(20em) translateY(-5em);
+}
+
+.box-2  {
+  transform: translateX(18em) translateY(-22em);
+}
+
+.box-3  {
+  transform: translateX(10em) translateY(-35em);
+}
+
+.videoPage .close-button {
+  position: absolute;
+  right: .1em;
+  top: .1em;
+  padding: .3em .5em  0 .5em;
+  color: white;
+  background: black;
+  cursor: pointer;
+}
+
+.videoPage .decoration {
+  left: .5em;
+  top: .3em;
+  position: absolute;
+  color: #0000005d;
+}
+
+.videoPage .video video {
+  width: 100%;
+}
+
 @media(max-width: 786px) {
+
+  .box-1 {
+    transform: translateX(5em) translateY(1em);
+  }
+  
+  .box-2  {
+    transform: translateX(3em) translateY(-15em);
+  }
+  
+  .box-3  {
+    transform: translateX(0em) translateY(-30em);
+  }
+  
+
+  .video-showcase-box{
+    border: 1px solid var(--borderCMini);
+  }
 
   .workedWith {
     border: solid 1px var(--borderCMini);

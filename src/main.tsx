@@ -10,6 +10,7 @@ import BlogPost from './components/BlogPost.tsx'
 import AdminBlog from './components/AdminBlog.tsx'
 import Websites from './components/sites.tsx'
 import Repos from './components/repos.tsx'
+import Videos from './components/Videos.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/admin" element={<AdminBlog />} />
           <Route path="/websites" element={<Websites />} />
           <Route path='/repos' element={<Repos />} />
+          <Route path='/videos' element={<Videos />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

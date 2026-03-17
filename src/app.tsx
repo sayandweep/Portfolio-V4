@@ -96,7 +96,7 @@ function App() {
                 <div className='di'>
                   <ul className='img-group'>
                     {Array.isArray(reels) && reels.map((reel) => (
-                      <li className='img-container' key={reel.id}>
+                      <li className='img-container' key={reel.id} onClick={() => {window.location.assign('/videos')}}>
                         <video src={reel.src} muted playsInline preload='metadata' autoPlay loop width={100}></video>
                       </li>
                     ))}
@@ -107,7 +107,7 @@ function App() {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 2.5, transition: { ease: easing } }}
                 className='img-gradient'>
-                  <a href="#"><span>View Full Page</span> <ArrowRight /></a>
+                  <a href="/videos"><span>Click Any Reel</span> <ArrowRight /></a>
               </motion.div>
             </section>
       </div>

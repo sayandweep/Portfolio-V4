@@ -291,6 +291,10 @@ ul li {
   padding: .2em .7em;
 }
 
+.workedWith small {
+  font-size: .5em;
+}
+
 .flex {
   display: flex;
 }
@@ -387,6 +391,10 @@ ul li {
 }
 
 @media(max-width: 786px) {
+
+  .workedWith {
+    border: solid 1px var(--borderCMini);
+  }
 
   .cardBody {
     border: solid 1px var(--borderCMini);

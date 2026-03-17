@@ -1,3 +1,7 @@
+export const repos = [
+  {name: 'gif.js', about: 'JavaScript GIF encoding library', link: 'https://github.com/jnordberg/gif.js'}
+]
+
 export const sites = [
   {name: 'Hero Patterns', type: 'design', link: 'https://heropatterns.com/'},
   {name: 'Adobe Podcast Enhancer', type: 'audio processing', link: 'https://podcast.adobe.com/en/enhance'}
@@ -11,13 +15,13 @@ export const projects = [
 
 // reels
 export const reels = [
-  {id: 'A4', src: '/reels/A4.mp4'},
-  {id: 'A5', src: '/reels/A5.mp4'},
-  {id: 'A6', src: '/reels/A6.mp4'},
-  {id: 'A7', src: '/reels/A7.mp4'},
-  {id: 'A3', src: '/reels/A3.mp4'},
-  {id: 'A8', src: '/reels/V1.mp4'},
-  {id: 'A9', src: '/reels/V3.mp4'},
+  {id: 'A4', src: '/reels/A4.webm'},
+  {id: 'A5', src: '/reels/A5.webm'},
+  {id: 'A6', src: '/reels/A6.webm'},
+  {id: 'A7', src: '/reels/A7.webm'},
+  {id: 'A3', src: '/reels/A3.webm'},
+  {id: 'A8', src: '/reels/V1.webm'},
+  {id: 'A9', src: '/reels/V3.webm'},
 ]
 
 // works

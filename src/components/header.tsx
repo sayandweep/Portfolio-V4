@@ -71,6 +71,7 @@ export default function Header() {
       {/* menu */}
       <div className="mainMenus">
             <div className="menu"><a href="/blogs">Blogs</a></div>
+            <div className="menu"><a href="/repos">Repositories</a></div>
             <div className="menu"><a href="/websites">Websites</a></div>
           </div>
 

@@ -117,7 +117,7 @@ function App() {
         <h5>Worked with</h5>
         <div className="workbox">
           {works.map((work) => (
-            <div key={work.name} className='workedWith'>{work.name} ({work.year})</div>
+            <div key={work.name} className='workedWith'>{work.name} <small>({work.year})</small></div>
           ))}
         </div>
       </div>

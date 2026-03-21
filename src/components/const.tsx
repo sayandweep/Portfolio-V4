@@ -3,6 +3,7 @@ export const repos = [
 ]
 
 export const sites = [
+  {name: 'Byteplus Ark Model', type: 'AI Model', link: 'https://www.byteplus.com/en/product/modelark'},
   {name: 'Hero Patterns', type: 'design', link: 'https://heropatterns.com/'},
   {name: 'Adobe Podcast Enhancer', type: 'audio processing', link: 'https://podcast.adobe.com/en/enhance'}
 ]
